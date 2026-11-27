@@ -105,13 +105,13 @@ h2 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); letter-spac
 
 .header { display: grid; grid-template-columns: auto 1fr auto; }
 .header nav { justify-self: end; }
+.language-options { display: flex; gap: .35rem; justify-content: end; }
 .language-switch {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 6rem;
   min-height: 44px;
-  padding: .45rem .9rem;
+  padding: .45rem .65rem;
   border: 1px solid var(--accent);
   border-radius: .4rem;
   background: var(--accent);
@@ -127,5 +127,6 @@ html[lang="en"] .evidence .record div { grid-template-columns: 1fr; gap: .12rem;
 @media (max-width: 650px) {
   .header { grid-template-columns: 1fr auto; row-gap: .5rem; padding-block: .7rem; }
   .header nav { grid-column: 1 / -1; grid-row: 2; justify-self: start; flex-wrap: wrap; }
-  .language-switch { grid-column: 2; grid-row: 1; }
+  .language-options { grid-column: 2; grid-row: 1; }
+  .language-switch { padding-inline: .45rem; font-size: .9rem; }
 }
