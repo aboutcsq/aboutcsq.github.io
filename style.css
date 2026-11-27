@@ -102,3 +102,16 @@ h2 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); letter-spac
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+.header { display: grid; grid-template-columns: auto 1fr auto; }
+.header nav { justify-self: end; }
+.language-switch { border: 1px solid #9cae8d9c; color: var(--accent); padding: .3rem .65rem; white-space: nowrap; }
+.language-switch:hover { background: var(--accent); color: var(--forest); }
+html[lang="en"] { --serif: Georgia, serif; --sans: system-ui, sans-serif; }
+html[lang="en"] h1 { font-size: clamp(3.2rem, 7.2vw, 6.3rem); }
+html[lang="en"] .evidence .record div { grid-template-columns: 1fr; gap: .12rem; }
+@media (max-width: 650px) {
+  .header { grid-template-columns: 1fr auto; row-gap: .5rem; padding-block: .7rem; }
+  .header nav { grid-column: 1 / -1; grid-row: 2; justify-self: start; flex-wrap: wrap; }
+  .language-switch { grid-column: 2; grid-row: 1; }
+}
