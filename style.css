@@ -105,8 +105,22 @@ h2 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.2rem); letter-spac
 
 .header { display: grid; grid-template-columns: auto 1fr auto; }
 .header nav { justify-self: end; }
-.language-switch { border: 1px solid #9cae8d9c; color: var(--accent); padding: .3rem .65rem; white-space: nowrap; }
-.language-switch:hover { background: var(--accent); color: var(--forest); }
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6rem;
+  min-height: 44px;
+  padding: .45rem .9rem;
+  border: 1px solid var(--accent);
+  border-radius: .4rem;
+  background: var(--accent);
+  color: var(--forest);
+  font-weight: 750;
+  white-space: nowrap;
+}
+.language-switch:hover { background: #eff4ce; }
+.language-switch:focus-visible { outline-color: #f6f7eb; }
 html[lang="en"] { --serif: Georgia, serif; --sans: system-ui, sans-serif; }
 html[lang="en"] h1 { font-size: clamp(3.2rem, 7.2vw, 6.3rem); }
 html[lang="en"] .evidence .record div { grid-template-columns: 1fr; gap: .12rem; }
